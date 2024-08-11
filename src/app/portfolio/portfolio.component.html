@@ -1,0 +1,46 @@
+<section class="text-center p-5  bg-success-subtle mt-5">
+    <h1 class="mt-5 fw-bold">PORTFOLIO COMPONENT</h1>
+<app-starr2></app-starr2>
+  
+    <div class="container">
+    <div class="row">
+        @for (photo of photos; track $index) {
+            <div class="col-sm-12 col-md-6 col-lg-4 g-4">
+                <div (click)="isHide=false;modelImg=photo.imgsrc" class=" card  position-relative overflow-hidden ">
+                    <img   [src]="photo.imgsrc" class="card-img" [alt]="photo.altAttr"   >
+                    <div  class="layer d-flex justify-content-center align-items-center"><i class=" fa-solid fa-plus"></i></div>
+                </div>
+                
+            </div>
+    
+           
+        }
+ <div (click)="hideModel($event.target,eleImg)"
+ 
+ [class.d-none]="isHide"  class=" bg-info bg-opacity-50 moddel  w-100 h-100 position-fixed top-0 start-0 d-flex justify-content-center align-items-center">
+        <img #eleImg [src]="modelImg" class="w-50" alt="">
+    </div>
+
+    </div>
+   
+    </div>
+
+    
+
+
+
+</section>
+
+
+
+
+
+
+
+<app-end></app-end>
+
+
+
+
+
+

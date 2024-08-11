@@ -1,0 +1,28 @@
+.layer{
+    background-color: #1BB7A2;
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0
+
+
+}
+    
+    
+    
+.layer:hover{
+    opacity: 0.8;
+    transition: all 1s;
+
+}
+
+
+i{
+    font-size: 100px;
+    color: white;
+}
+.moddel{
+    z-index: 999;
+}
